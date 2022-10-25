@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <Flex minH={'10vh'} color={color}>
         <Flex px={10} justifyContent={"center"} alignItems={"center"}>
-          <Text fontFamily={"Rubik"} fontWeight={"extrabold"} fontSize={20}>
+          <Text fontFamily={"Rubik"} fontWeight={"extrabold"} fontSize={[14,14,20,20]}>
             Sindy Aprilia
           </Text>
         </Flex>
