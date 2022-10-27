@@ -20,7 +20,7 @@ const Welcoming = () => {
           >
             <Text
               fontFamily={"Esteban"}
-              fontSize={[20, 20, 30, 50]}
+              fontSize={[30, 30, 30, 50]}
               fontWeight={"extrabold"}
               color={textHeader}
             >
@@ -49,7 +49,7 @@ const Welcoming = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <Text fontFamily={"Esteban"} fontSize={[20, 20, 30, 50]}>
+            <Text fontFamily={"Esteban"} fontSize={[30, 30, 30, 50]}>
               <Typewriter
                 options={{
                   strings: [

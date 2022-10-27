@@ -1,4 +1,4 @@
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Button,
   Flex,
@@ -7,37 +7,180 @@ import {
   useColorModeValue,
   Text,
   HStack,
+  Box,
+  IconButton,
+  Link,
+  Stack,
+  useDisclosure,
+  Avatar,
 } from "@chakra-ui/react";
 
 const Navbar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const color = useColorModeValue("black", "white");
   return (
     <>
-      <Flex minH={'10vh'} color={color}>
-        <Flex px={10} justifyContent={"center"} alignItems={"center"}>
-          <Text fontFamily={"Rubik"} fontWeight={"extrabold"} fontSize={[14,14,20,20]}>
-            Sindy Aprilia
-          </Text>
-        </Flex>
-        <Spacer />
-        <Flex px={10} justifyContent={"center"} alignItems={"center"}>
-          <HStack spacing={10}>
-            <Text fontFamily={"Rubik"} fontSize={14}>
-              About
-            </Text>
-            <Text fontFamily={"Rubik"} fontSize={14}>
-              Projects
-            </Text>
-            <Text fontFamily={"Rubik"} fontSize={14}>
-              Gallery
-            </Text>
+      <Box bg={useColorModeValue("gray.200", "gray.900")} px={4}>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack spacing={8} alignItems={"center"}>
+            <Box mx={5}>
+              <Text
+                fontFamily={"Dancing Script"}
+                fontSize={[14, 20, 20, 20]}
+                color={color}
+              >
+                Sindy Aprilia
+              </Text>
+            </Box>
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
+              {colorMode === "light" ? (
+                <>
+                  <Link href={"/home"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.600",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        About
+                      </Text>
+                    </Button>
+                  </Link>
+                  <Link href={"/state"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.600",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        Projects
+                      </Text>
+                    </Button>
+                  </Link>
+                  <Link href={"/faq"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.600",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        Gallery
+                      </Text>
+                    </Button>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link href={"/home"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.100",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        About
+                      </Text>
+                    </Button>
+                  </Link>
+                  <Link href={"/state"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.100",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        Projects
+                      </Text>
+                    </Button>
+                  </Link>
+                  <Link href={"/faq"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.100",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        Gallery
+                      </Text>
+                    </Button>
+                  </Link>
+                </>
+              )}
+            </HStack>
+          </HStack>
+          <Flex alignItems={"center"}>
             <Button size="sm" colorScheme="blue" onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
-          </HStack>
+          </Flex>
         </Flex>
-      </Flex>
+
+        {isOpen ? (
+          <Box pb={4} display={{ md: "none" }}>
+            <Stack as={"nav"} spacing={4}>
+              <Link href={"/home"}>
+                <Button
+                  color={color}
+                  variant={"none"}
+                  _hover={{
+                    color: "gray.300",
+                  }}
+                >
+                  <Text fontSize={["md", "xs", "md", "md", "lg"]}>About</Text>
+                </Button>
+              </Link>
+              <Link href={"/state"}>
+                <Button
+                  color={color}
+                  variant={"none"}
+                  _hover={{
+                    color: "gray.300",
+                  }}
+                >
+                  <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                    Projects
+                  </Text>
+                </Button>
+              </Link>
+              <Link href={"/faq"}>
+                <Button
+                  color={color}
+                  variant={"none"}
+                  _hover={{
+                    color: "gray.300",
+                  }}
+                >
+                  <Text fontSize={["md", "xs", "md", "md", "lg"]}>Gallery</Text>
+                </Button>
+              </Link>
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
     </>
   );
 };
