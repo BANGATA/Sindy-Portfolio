@@ -57,7 +57,7 @@ const Welcoming = () => {
                     "Selamat Datang!",
                     "Willkommen!",
                     "Bienvenue!",
-                    "Bienvenidas!",
+                    "Annyeonghaseyo!",
                   ],
                   autoStart: true,
                   loop: true,
