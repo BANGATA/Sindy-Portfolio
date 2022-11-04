@@ -6,7 +6,11 @@ const Footer = () => {
     <>
       <Flex p={5} justifyContent={"center"} alignItems={"center"}>
         <VStack>
-          <Text fontFamily={"Rubik"} fontWeight={"bold"} fontSize={20}>
+          <Text
+            fontFamily={"Rubik"}
+            fontWeight={"bold"}
+            fontSize={[14, 16, 20, 20]}
+          >
             Copyright © 2022 - Sindy Aprilia
           </Text>
         </VStack>

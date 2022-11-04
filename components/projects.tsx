@@ -6,10 +6,38 @@ import {
   Text,
   Spacer,
   VStack,
+  HStack,
+  Link,
 } from "@chakra-ui/react";
 import Atropos from "atropos/react";
 
 const Projects = () => {
+  const Projects = [
+    {
+      id: 1,
+      Judul: "Project 1",
+      Desc: "Lorem",
+      Img: "",
+    },
+    {
+      id: 2,
+      Judul: "Project 2",
+      Desc: "Lorem",
+      Img: "",
+    },
+    {
+      id: 3,
+      Judul: "Project 3",
+      Desc: "Lorem",
+      Img: "",
+    },
+    {
+      id: 4,
+      Judul: "Project 4",
+      Desc: "Lorem",
+      Img: "",
+    },
+  ];
   return (
     <>
       <Flex
@@ -30,48 +58,47 @@ const Projects = () => {
               Project
             </Text>
             <Spacer />
-            <Text fontFamily={"Rubik"} fontSize={14}>
-              See More...
-            </Text>
+            <Link href="/pages/projects">
+              <a>
+                <Text fontFamily={"Rubik"} fontSize={14}>
+                  See More...
+                </Text>
+              </a>
+            </Link>
           </Flex>
           <Flex p={5} w={"100%"} justifyContent={"center"}>
             <Wrap spacing="30px" justify="center">
-              <WrapItem>
-                <Center
-                  w={["250px", "300px"]}
-                  h={["300px", "400px"]}
-                  bg="red.200"
-                >
-                  Box 1
-                </Center>
-              </WrapItem>
-              <WrapItem>
-                <Center
-                  w={["250px", "300px"]}
-                  h={["300px", "400px"]}
-                  bg="green.200"
-                >
-                  Box 2
-                </Center>
-              </WrapItem>
-              <WrapItem>
-                <Center
-                  w={["250px", "300px"]}
-                  h={["300px", "400px"]}
-                  bg="tomato"
-                >
-                  Box 3
-                </Center>
-              </WrapItem>
-              <WrapItem>
-                <Center
-                  w={["250px", "300px"]}
-                  h={["300px", "400px"]}
-                  bg="blue.200"
-                >
-                  Box 4
-                </Center>
-              </WrapItem>
+              {Projects.map((i) => {
+                return (
+                  <Link href="#" key={i.id}>
+                    <WrapItem>
+                      <VStack
+                        w={["250px", "275px", "300px", "300px"]}
+                        h={["300px", "350px", "400px", "400px"]}
+                        bg="red.200"
+                        justifyContent={"space-between"}
+                        border={"solid"}
+                      >
+                        <Flex
+                          w={"100%"}
+                          justifyContent={"center"}
+                          alignItems={"center"}
+                        >
+                          {i.Img}
+                        </Flex>
+                        <VStack bg="blue.200" w={"100%"} h={100} p={3}>
+                          <Text w={"100%"} justifyContent={"start"}>
+                            {i.Judul}
+                          </Text>
+                          <Text w={"100%"} justifyContent={"start"}>
+                            {i.Desc}
+                          </Text>
+                        </VStack>
+                      </VStack>
+                    </WrapItem>
+                  </Link>
+                );
+              })}
             </Wrap>
           </Flex>
         </VStack>

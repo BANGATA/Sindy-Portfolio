@@ -19,6 +19,11 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const color = useColorModeValue("black", "white");
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
+
   return (
     <>
       <Box bg={useColorModeValue("gray.200", "gray.900")} px={4}>
@@ -138,7 +143,6 @@ const Navbar = () => {
             </Button>
           </Flex>
         </Flex>
-
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
