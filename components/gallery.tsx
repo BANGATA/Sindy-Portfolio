@@ -1,5 +1,16 @@
-import { Flex, Spacer, VStack, Text, Wrap, WrapItem } from "@chakra-ui/react";
+import {
+  Flex,
+  Spacer,
+  VStack,
+  Text,
+  Wrap,
+  WrapItem,
+  Img,
+} from "@chakra-ui/react";
 import Link from "next/link";
+import Atropos from "atropos/react";
+import "atropos/css";
+import { motion } from "framer-motion";
 
 const Gallery = () => {
   const Gallery = [
@@ -44,9 +55,9 @@ const Gallery = () => {
         alignItems={"center"}
         flexDirection={"column"}
       >
-        <VStack spacing={10}>
+        <VStack>
           <Flex
-            minH={50}
+            minH={"10vh"}
             w={"100%"}
             p={10}
             justifyContent={"center"}
@@ -68,24 +79,37 @@ const Gallery = () => {
             <Wrap spacing="10px" justify={"center"}>
               {Gallery.map((i) => {
                 return (
-                  <Link href="#" key={i.id}>
-                    <WrapItem>
-                      <VStack
-                        w={["300px", "300px", "350px", "350px"]}
-                        h={["300px", "350px", "400px", "400px"]}
-                        bg="red.200"
-                        justifyContent={"space-between"}
-                      >
-                        <Flex
-                          w={"100%"}
-                          justifyContent={"center"}
-                          alignItems={"center"}
+                  // <Atropos activeOffset={40} shadowScale={1.05}>
+                  <motion.div
+                    whileHover={{
+                      scale: 1.2,
+                      border: "5px solid",
+                    }}
+                  >
+                    <Link href="#" key={i.id}>
+                      <WrapItem>
+                        <VStack
+                          w={["300px", "300px", "350px", "350px"]}
+                          h={["300px", "350px", "400px", "400px"]}
+                          bg="red.200"
+                          justifyContent={"space-between"}
                         >
-                          {/* {i.Img} */}
-                        </Flex>
-                      </VStack>
-                    </WrapItem>
-                  </Link>
+                          <Flex
+                            w={"100%"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                          >
+                            <Img
+                              src="./gallery.jpg"
+                              w={["300px", "300px", "350px", "350px"]}
+                              h={["300px", "350px", "400px", "400px"]}
+                            />
+                          </Flex>
+                        </VStack>
+                      </WrapItem>
+                    </Link>
+                  </motion.div>
+                  // </Atropos>
                 );
               })}
             </Wrap>

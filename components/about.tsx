@@ -12,6 +12,7 @@ import { EmailIcon } from "@chakra-ui/icons";
 import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import Atropos from "atropos/react";
 import { motion } from "framer-motion";
+import "atropos/css";
 
 const About = () => {
   return (
@@ -37,7 +38,8 @@ const About = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <motion.div whileHover={{ scale: 1.2 }}>
+            {/* <motion.div whileHover={{ scale: 1.2 }}> */}
+            <Atropos activeOffset={40} shadowScale={1.05}>
               <VStack
                 p={[7, 7, 10, 10]}
                 spacing={[2, 2, 5, 5]}
@@ -53,7 +55,10 @@ const About = () => {
                   w={[100, 100, 150, 150]}
                   h={[100, 100, 150, 150]}
                 />
-                <Text fontSize={[26, 32, 36, 36]} fontFamily={"Dancing Script"}>
+                <Text
+                  fontSize={[26, 32, 36, 36]}
+                  fontFamily={"Dancing Script"}
+                >
                   Sindy Aprilia
                 </Text>
                 <Text fontSize={[11, 15, 15, 15]} fontFamily={"Rubik"}>
@@ -100,7 +105,8 @@ const About = () => {
                   </a>
                 </Link>
               </VStack>
-            </motion.div>
+            </Atropos>
+            {/* </motion.div> */}
           </Flex>
           <Flex
             w={["75%", "75%", "50%", "50%"]}
