@@ -78,13 +78,13 @@ const Gallery = () => {
             <Wrap spacing="10px" justify={"center"}>
               {Gallery.map((i) => {
                 return (
-                  <motion.div
-                    whileHover={{
-                      scale: 1.2,
-                      border: "5px solid",
-                    }}
-                  >
-                    <Link href="#" key={i.id}>
+                  <Link href="#" key={i.id}>
+                    <motion.div
+                      whileHover={{
+                        scale: 1.2,
+                        border: "5px solid",
+                      }}
+                    >
                       <WrapItem>
                         <VStack
                           w={["300px", "300px", "350px", "350px"]}
@@ -105,8 +105,8 @@ const Gallery = () => {
                           </Flex>
                         </VStack>
                       </WrapItem>
-                    </Link>
-                  </motion.div>
+                    </motion.div>
+                  </Link>
                 );
               })}
             </Wrap>
