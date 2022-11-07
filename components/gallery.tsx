@@ -8,7 +8,6 @@ import {
   Img,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import Atropos from "atropos/react";
 import "atropos/css";
 import { motion } from "framer-motion";
 
@@ -79,7 +78,6 @@ const Gallery = () => {
             <Wrap spacing="10px" justify={"center"}>
               {Gallery.map((i) => {
                 return (
-                  // <Atropos activeOffset={40} shadowScale={1.05}>
                   <motion.div
                     whileHover={{
                       scale: 1.2,
@@ -109,7 +107,6 @@ const Gallery = () => {
                       </WrapItem>
                     </Link>
                   </motion.div>
-                  // </Atropos>
                 );
               })}
             </Wrap>

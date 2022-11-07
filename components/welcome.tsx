@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const Welcoming = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const textHeader = useColorModeValue("black","white");
+  const textHeader = useColorModeValue("black", "white");
   return (
     <>
       <Flex minH={"90vh"} justifyContent={"center"} alignItems={"center"}>
