@@ -42,7 +42,7 @@ const Projects = () => {
     <>
       <Flex
         minH={"100vh"}
-        border={"solid"}
+        //border={"solid"}
         alignItems={"center"}
         flexDirection={"column"}
       >

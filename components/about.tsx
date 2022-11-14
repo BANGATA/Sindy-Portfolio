@@ -9,7 +9,7 @@ const About = () => {
     <>
       <Flex
         minH={"100vh"}
-        border={"solid"}
+        //border={"solid"}
         justifyContent={"center"}
         alignItems={"center"}
       >

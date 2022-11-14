@@ -10,9 +10,9 @@ const Welcoming = () => {
       <Flex minH={"90vh"} justifyContent={"center"} alignItems={"center"}>
         {colorMode === "light" ? (
           <Flex
-            // bgRepeat={"no-repeat"}
-            // bgImage={"./headerImg/3.4.jpg"}
-            // bgPosition="center"
+            bgRepeat={"no-repeat"}
+            bgImage={"./4.jpg"}
+            bgPosition="center"
             w={"full"}
             h={"90vh"}
             justifyContent={"center"}
@@ -41,9 +41,9 @@ const Welcoming = () => {
           </Flex>
         ) : (
           <Flex
-            // bgImage={"./headerImg/2.jpg"}
-            // bgPosition="center"
-            //bgRepeat={"no-repeat"}
+            bgImage={"./1.jpg"}
+            bgPosition="center"
+            bgRepeat={"no-repeat"}
             w={"full"}
             h={"90vh"}
             justifyContent={"center"}

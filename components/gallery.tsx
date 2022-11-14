@@ -45,12 +45,16 @@ const Gallery = () => {
       id: 7,
       Img: "",
     },
+    {
+      id: 8,
+      Img: "",
+    },
   ];
   return (
     <>
       <Flex
         minH={"100vh"}
-        border={"solid"}
+        //border={"solid"}
         alignItems={"center"}
         flexDirection={"column"}
       >
@@ -74,39 +78,42 @@ const Gallery = () => {
               </a>
             </Link>
           </Flex>
-          <Flex p={5} w={"100%"}>
-            <Wrap spacing="10px" justify={"center"}>
+          <Flex minH={"90vh"} p={[0, 5]}>
+            <Wrap
+              spacing="10px"
+              justify={"center"}
+              align={"center"}
+              p={10}
+              //border={"solid"}
+            >
               {Gallery.map((i) => {
                 return (
-                  <Link href="#" key={i.id}>
-                    <motion.div
-                      whileHover={{
-                        scale: 1.2,
-                        border: "5px solid",
-                      }}
-                    >
-                      <WrapItem>
-                        <VStack
-                          w={["300px", "300px", "350px", "350px"]}
-                          h={["300px", "350px", "400px", "400px"]}
-                          bg="red.200"
-                          justifyContent={"space-between"}
+                  <motion.div
+                    whileHover={{
+                      scale: 1.2,
+                    }}
+                  >
+                    <WrapItem border={"5px solid"} key={i.id}>
+                      <VStack
+                        w={["200px", "300px", "350px", "350px"]}
+                        h={["300px", "350px", "400px", "400px"]}
+                        bg="red.200"
+                        justifyContent={"space-between"}
+                      >
+                        <Flex
+                          w={"100%"}
+                          justifyContent={"center"}
+                          alignItems={"center"}
                         >
-                          <Flex
-                            w={"100%"}
-                            justifyContent={"center"}
-                            alignItems={"center"}
-                          >
-                            <Img
-                              src="./gallery.jpg"
-                              w={["300px", "300px", "350px", "350px"]}
-                              h={["300px", "350px", "400px", "400px"]}
-                            />
-                          </Flex>
-                        </VStack>
-                      </WrapItem>
-                    </motion.div>
-                  </Link>
+                          <Img
+                            src="./gallery.jpg"
+                            w={["300px", "300px", "350px", "350px"]}
+                            h={["300px", "350px", "400px", "400px"]}
+                          />
+                        </Flex>
+                      </VStack>
+                    </WrapItem>
+                  </motion.div>
                 );
               })}
             </Wrap>
