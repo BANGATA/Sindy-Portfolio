@@ -92,8 +92,9 @@ const Gallery = () => {
                     whileHover={{
                       scale: 1.2,
                     }}
+                    key={i.id}
                   >
-                    <WrapItem border={"5px solid"} key={i.id}>
+                    <WrapItem border={"5px solid"}>
                       <VStack
                         w={["200px", "300px", "350px", "350px"]}
                         h={["300px", "350px", "400px", "400px"]}
