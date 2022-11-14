@@ -51,6 +51,8 @@ const Gallery = () => {
       Img: "",
     },
   ];
+
+  const warnaBorder = useColorModeValue("black", "white");
   return (
     <>
       <Flex
@@ -97,7 +99,7 @@ const Gallery = () => {
                   >
                     <WrapItem
                       border={"5px solid"}
-                      color={useColorModeValue("black", "white")}
+                      color={warnaBorder}
                     >
                       <VStack
                         w={["200px", "300px", "350px", "350px"]}
