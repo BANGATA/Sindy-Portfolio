@@ -61,26 +61,26 @@ const Gallery = () => {
         alignItems={"center"}
         flexDirection={"column"}
       >
+        <Flex
+          minH={"10vh"}
+          w={"100%"}
+          p={10}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Text fontFamily={"Rubik"} fontSize={30}>
+            Gallery
+          </Text>
+          <Spacer />
+          <Link href="/pages/gallery">
+            <a>
+              <Text fontFamily={"Rubik"} fontSize={14}>
+                See More...
+              </Text>
+            </a>
+          </Link>
+        </Flex>
         <VStack>
-          <Flex
-            minH={"10vh"}
-            w={"100%"}
-            p={10}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <Text fontFamily={"Rubik"} fontSize={30}>
-              Gallery
-            </Text>
-            <Spacer />
-            <Link href="/pages/gallery">
-              <a>
-                <Text fontFamily={"Rubik"} fontSize={14}>
-                  See More...
-                </Text>
-              </a>
-            </Link>
-          </Flex>
           <Flex minH={"90vh"} p={[0, 5]}>
             <Wrap
               spacing="10px"
@@ -97,10 +97,7 @@ const Gallery = () => {
                     }}
                     key={i.id}
                   >
-                    <WrapItem
-                      border={"5px solid"}
-                      color={warnaBorder}
-                    >
+                    <WrapItem border={"5px solid"} color={warnaBorder}>
                       <VStack
                         w={["200px", "300px", "350px", "350px"]}
                         h={["300px", "350px", "400px", "400px"]}

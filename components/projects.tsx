@@ -8,6 +8,10 @@ import {
   VStack,
   HStack,
   Link,
+  AspectRatio,
+  Image,
+  useColorModeValue,
+  Stack,
 } from "@chakra-ui/react";
 import Atropos from "atropos/react";
 
@@ -38,6 +42,7 @@ const Projects = () => {
       Img: "",
     },
   ];
+  const color = useColorModeValue("black", "white");
   return (
     <>
       <Flex
@@ -46,28 +51,125 @@ const Projects = () => {
         alignItems={"center"}
         flexDirection={"column"}
       >
+        <Flex
+          minH={50}
+          w={"100%"}
+          p={10}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Text fontFamily={"Rubik"} fontSize={30}>
+            Project
+          </Text>
+          <Spacer />
+          <Link href="/pages/projects">
+            <a>
+              <Text fontFamily={"Rubik"} fontSize={14}>
+                See More...
+              </Text>
+            </a>
+          </Link>
+        </Flex>
         <VStack spacing={10}>
           <Flex
-            minH={50}
+            p={5}
             w={"100%"}
-            p={10}
-            justifyContent={"center"}
-            alignItems={"center"}
+            justifyContent={"center"} //border={"solid"}
           >
-            <Text fontFamily={"Rubik"} fontSize={30}>
-              Project
-            </Text>
-            <Spacer />
-            <Link href="/pages/projects">
-              <a>
-                <Text fontFamily={"Rubik"} fontSize={14}>
-                  See More...
-                </Text>
-              </a>
-            </Link>
-          </Flex>
-          <Flex p={5} w={"100%"} justifyContent={"center"}>
-            <Wrap spacing="30px" justify="center">
+            <Stack
+              w={"full"}
+              spacing={[10, 10, 10, 20]}
+              direction={["column", "column", "column", "row"]}
+            >
+              <VStack
+                border={"solid"}
+                h={"450px"}
+                borderRadius={"lg"}
+                p={3}
+                bgColor={useColorModeValue("red.500", "red.700")}
+                boxShadow={"2xl"}
+              >
+                <AspectRatio
+                  w={["240px", "320px", "320px", "400px"]}
+                  h={["135px", "180px", "180px", "225px"]}
+                  maxH={"20em"}
+                  bgColor={"#000"}
+                  color={color}
+                  outline={"2px solid"}
+                  borderRadius={"lg"}
+                  ratio={1}
+                  overflow={"hidden"}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+                    title={"YouTube video player"}
+                    style={{ borderRadius: "1em" }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
+                  />
+                </AspectRatio>
+                <Text>JUDUL</Text>
+                <Text>Deskripsi</Text>
+              </VStack>
+              <VStack
+                border={"solid"}
+                h={"450px"}
+                borderRadius={"lg"}
+                boxShadow={"2xl"}
+                p={3}
+                bgColor={useColorModeValue("green.500", "green.700")}
+              >
+                <AspectRatio
+                  w={["240px", "320px", "320px", "400px"]}
+                  h={["135px", "180px", "180px", "225px"]}
+                  maxH={"20em"}
+                  bgColor={"#000"}
+                  color={color}
+                  outline={"2px solid"}
+                  borderRadius={"lg"}
+                  ratio={1}
+                  overflow={"hidden"}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+                    title={"YouTube video player"}
+                    style={{ borderRadius: "1em" }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
+                  />
+                </AspectRatio>
+                <Text>JUDUL</Text>
+                <Text>Deskripsi</Text>
+              </VStack>
+              <VStack
+                border={"solid"}
+                h={"450px"}
+                borderRadius={"lg"}
+                p={3}
+                bgColor={useColorModeValue("blue.500", "blue.700")}
+                boxShadow={"2xl"}
+              >
+                <AspectRatio
+                  w={["240px", "320px", "320px", "400px"]}
+                  h={["135px", "180px", "180px", "225px"]}
+                  maxH={"20em"}
+                  bgColor={"#000"}
+                  color={color}
+                  outline={"2px solid"}
+                  borderRadius={"lg"}
+                  ratio={1}
+                  overflow={"hidden"}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+                    title={"YouTube video player"}
+                    style={{ borderRadius: "1em" }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
+                  />
+                </AspectRatio>
+                <Text>JUDUL</Text>
+                <Text>Deskripsi</Text>
+              </VStack>
+            </Stack>
+            {/* <Wrap spacing="30px" justify="center">
               {Projects.map((i) => {
                 return (
                   <Link href="#" key={i.id}>
@@ -99,7 +201,7 @@ const Projects = () => {
                   </Link>
                 );
               })}
-            </Wrap>
+            </Wrap> */}
           </Flex>
         </VStack>
       </Flex>
