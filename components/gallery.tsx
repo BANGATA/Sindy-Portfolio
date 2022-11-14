@@ -6,6 +6,7 @@ import {
   Wrap,
   WrapItem,
   Img,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import "atropos/css";
@@ -94,7 +95,10 @@ const Gallery = () => {
                     }}
                     key={i.id}
                   >
-                    <WrapItem border={"5px solid"}>
+                    <WrapItem
+                      border={"5px solid"}
+                      color={useColorModeValue("black", "white")}
+                    >
                       <VStack
                         w={["200px", "300px", "350px", "350px"]}
                         h={["300px", "350px", "400px", "400px"]}
@@ -107,7 +111,7 @@ const Gallery = () => {
                           alignItems={"center"}
                         >
                           <Img
-                            src="./gallery.jpg"
+                            src="./gallery.JPG"
                             w={["300px", "300px", "350px", "350px"]}
                             h={["300px", "350px", "400px", "400px"]}
                           />
