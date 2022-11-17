@@ -13,42 +13,46 @@ import "atropos/css";
 import { motion } from "framer-motion";
 
 const Gallery = () => {
-  const Gallery = [
+  interface pict{
+    id: number,
+    Img: string,
+  }
+  const Gallery: pict[] = [
     {
       id: 0,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%201/1.png",
     },
     {
       id: 1,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%201/2.png",
     },
     {
       id: 2,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%201/3.png",
     },
     {
       id: 3,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%202/1.png",
     },
     {
       id: 4,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%202/2.png",
     },
     {
       id: 5,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%202/3.png",
     },
     {
       id: 6,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%203/1.png",
     },
     {
       id: 7,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%203/2.png",
     },
     {
       id: 8,
-      Img: "",
+      Img: "https://storage.googleapis.com/kuliah_project/Web_porto/GALERY/ROW%203/3.png",
     },
   ];
 
@@ -72,7 +76,7 @@ const Gallery = () => {
             Gallery
           </Text>
           <Spacer />
-          <Link href="/pages/gallery">
+          <Link href="./gallery">
             <a>
               <Text fontFamily={"Rubik"} fontSize={14}>
                 See More...
@@ -89,7 +93,7 @@ const Gallery = () => {
               p={10}
               //border={"solid"}
             >
-              {Gallery.map((i) => {
+              {Gallery.filter((i: any) => i.id <= 5).map((i) => {
                 return (
                   <motion.div
                     whileHover={{
@@ -99,27 +103,89 @@ const Gallery = () => {
                   >
                     <WrapItem border={"5px solid"} color={warnaBorder}>
                       <VStack
-                        w={["200px", "300px", "350px", "350px"]}
-                        h={["300px", "350px", "400px", "400px"]}
+                        w={["240px", "320px", "320px", "400px"]}
+                        h={["135px", "180px", "180px", "225px"]}
                         bg="red.200"
                         justifyContent={"space-between"}
                       >
-                        <Flex
-                          w={"100%"}
-                          justifyContent={"center"}
-                          alignItems={"center"}
-                        >
-                          <Img
-                            src="./gallery.JPG"
-                            w={["300px", "300px", "350px", "350px"]}
-                            h={["300px", "350px", "400px", "400px"]}
-                          />
-                        </Flex>
+                        <Img
+                          src={i.Img}
+                          loading={"lazy"}
+                          w={["240px", "320px", "320px", "400px"]}
+                          h={["135px", "180px", "180px", "225px"]}
+                        />
                       </VStack>
                     </WrapItem>
                   </motion.div>
                 );
               })}
+              {/* {Gallery.filter((i: any) => i.id > 5).map((i) => {
+                return ( */}
+              <motion.div
+                whileHover={{
+                  scale: 1.2,
+                }}
+              >
+                <WrapItem border={"5px solid"} color={warnaBorder}>
+                  <VStack
+                    w={["200px", "300px", "350px", "350px"]}
+                    h={["300px", "350px", "400px", "400px"]}
+                    bg="red.200"
+                    justifyContent={"space-between"}
+                  >
+                    <Img
+                      src={Gallery[6]?.Img}
+                      loading={"lazy"}
+                      w={["200px", "300px", "350px", "350px"]}
+                      h={["300px", "350px", "400px", "400px"]}
+                    />
+                  </VStack>
+                </WrapItem>
+              </motion.div>
+              <motion.div
+                whileHover={{
+                  scale: 1.2,
+                }}
+              >
+                <WrapItem border={"5px solid"} color={warnaBorder}>
+                  <VStack
+                    w={["240px", "320px", "320px", "400px"]}
+                    h={["135px", "180px", "180px", "225px"]}
+                    bg="red.200"
+                    justifyContent={"space-between"}
+                  >
+                    <Img
+                      src={Gallery[7]?.Img}
+                      loading={"lazy"}
+                      w={["240px", "320px", "320px", "400px"]}
+                      h={["135px", "180px", "180px", "225px"]}
+                    />
+                  </VStack>
+                </WrapItem>
+              </motion.div>
+              <motion.div
+                whileHover={{
+                  scale: 1.2,
+                }}
+              >
+                <WrapItem border={"5px solid"} color={warnaBorder}>
+                  <VStack
+                    w={["200px", "300px", "350px", "350px"]}
+                    h={["300px", "350px", "400px", "400px"]}
+                    bg="red.200"
+                    justifyContent={"space-between"}
+                  >
+                    <Img
+                      src={Gallery[8]?.Img}
+                      loading={"lazy"}
+                      w={["200px", "300px", "350px", "350px"]}
+                      h={["300px", "350px", "400px", "400px"]}
+                    />
+                  </VStack>
+                </WrapItem>
+              </motion.div>
+              {/* );
+              })} */}
             </Wrap>
           </Flex>
         </VStack>

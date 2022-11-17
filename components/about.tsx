@@ -60,35 +60,32 @@ const About = () => {
                   <EmailIcon />
                   <Text>sindyaprilia742@gmail.com</Text>
                 </HStack>
-                <Link href={"https://instagram.com/sindy.arttt"}>
-                  <a target="_blank">
-                    <HStack
-                      fontSize={[10, 13, 15, 15]}
-                      fontFamily={"Rubik"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                      spacing={2}
-                    >
-                      <AiFillInstagram />
-                      <Text>@sind.arttt</Text>
-                    </HStack>
-                  </a>
+                <Link href={"https://instagram.com/sind.arttt"} isExternal>
+                  <HStack
+                    fontSize={[10, 13, 15, 15]}
+                    fontFamily={"Rubik"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    spacing={2}
+                  >
+                    <AiFillInstagram />
+                    <Text>@sind.arttt</Text>
+                  </HStack>
                 </Link>
                 <Link
                   href={"https://www.linkedin.com/in/sindy-aprilia-b135aa214/"}
+                  isExternal
                 >
-                  <a target="_blank">
-                    <HStack
-                      fontSize={[10, 13, 15, 15]}
-                      fontFamily={"Rubik"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                      spacing={2}
-                    >
-                      <AiFillLinkedin />
-                      <Text>Sindy Aprilia</Text>
-                    </HStack>
-                  </a>
+                  <HStack
+                    fontSize={[10, 13, 15, 15]}
+                    fontFamily={"Rubik"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    spacing={2}
+                  >
+                    <AiFillLinkedin />
+                    <Text>Sindy Aprilia</Text>
+                  </HStack>
                 </Link>
               </VStack>
             </Atropos>

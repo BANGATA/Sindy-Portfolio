@@ -13,12 +13,12 @@ const Home: NextPage = () => {
   return (
     <>
       <Box minH={"100vh"}>
-        <Navbar/>
-        <Welcoming/>
-        <About/>
-        <Projects/>
-        <Gallery/>
-        <Footer/>
+        {/* <Navbar /> */}
+        <Welcoming />
+        <About />
+        <Projects />
+        <Gallery />
+        <Footer />
       </Box>
     </>
   );

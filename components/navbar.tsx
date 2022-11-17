@@ -26,7 +26,12 @@ const Navbar = () => {
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.200", "gray.900")} px={4}>
+      <Box
+        bg={useColorModeValue("gray.200", "gray.900")}
+        px={4}
+        backdropFilter="auto"
+        backdropBlur="8px"
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -36,15 +41,17 @@ const Navbar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box mx={5}>
-              <Text
-                fontFamily={"Dancing Script"}
-                fontSize={[14, 20, 20, 20]}
-                color={color}
-              >
-                Sindy Aprilia
-              </Text>
-            </Box>
+            <Link href="/">
+              <Box mx={5}>
+                <Text
+                  fontFamily={"Dancing Script"}
+                  fontSize={[14, 20, 20, 20]}
+                  color={color}
+                >
+                  Sindy Aprilia
+                </Text>
+              </Box>
+            </Link>
             <HStack
               as={"nav"}
               spacing={4}
