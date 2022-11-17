@@ -110,7 +110,7 @@ const Gallery = () => {
                       >
                         <Img
                           src={i.Img}
-                          loading={"lazy"}
+                          //loading={"lazy"}
                           w={["240px", "320px", "320px", "400px"]}
                           h={["135px", "180px", "180px", "225px"]}
                         />
@@ -135,7 +135,7 @@ const Gallery = () => {
                   >
                     <Img
                       src={Gallery[6]?.Img}
-                      loading={"lazy"}
+                      //loading={"lazy"}
                       w={["200px", "300px", "350px", "350px"]}
                       h={["300px", "350px", "400px", "400px"]}
                     />
@@ -156,7 +156,7 @@ const Gallery = () => {
                   >
                     <Img
                       src={Gallery[7]?.Img}
-                      loading={"lazy"}
+                      //loading={"lazy"}
                       w={["240px", "320px", "320px", "400px"]}
                       h={["135px", "180px", "180px", "225px"]}
                     />
@@ -177,7 +177,7 @@ const Gallery = () => {
                   >
                     <Img
                       src={Gallery[8]?.Img}
-                      loading={"lazy"}
+                      //loading={"lazy"}
                       w={["200px", "300px", "350px", "350px"]}
                       h={["300px", "350px", "400px", "400px"]}
                     />
