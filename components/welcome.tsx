@@ -9,6 +9,7 @@ import {
   useColorModeValue,
   useDisclosure,
   Image,
+  Stack,
 } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import Typewriter from "typewriter-effect";
@@ -112,6 +113,51 @@ const Welcoming = () => {
                 </Button>
               </Flex>
             </Flex>
+            {isOpen ? (
+              <Box pb={4} display={{ md: "none" }}>
+                <Stack as={"nav"} spacing={4}>
+                  <Link href={"/home"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.300",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        About
+                      </Text>
+                    </Button>
+                  </Link>
+                  <Link href={"/state"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.300",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        Projects
+                      </Text>
+                    </Button>
+                  </Link>
+                  <Link href={"/faq"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.300",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        Gallery
+                      </Text>
+                    </Button>
+                  </Link>
+                </Stack>
+              </Box>
+            ) : null}
           </Box>
           <Flex
             w={"full"}
@@ -227,6 +273,51 @@ const Welcoming = () => {
                 </Button>
               </Flex>
             </Flex>
+            {isOpen ? (
+              <Box pb={4} display={{ md: "none" }}>
+                <Stack as={"nav"} spacing={4}>
+                  <Link href={"/home"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.300",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        About
+                      </Text>
+                    </Button>
+                  </Link>
+                  <Link href={"/state"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.300",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        Projects
+                      </Text>
+                    </Button>
+                  </Link>
+                  <Link href={"/faq"}>
+                    <Button
+                      color={color}
+                      variant={"none"}
+                      _hover={{
+                        color: "gray.300",
+                      }}
+                    >
+                      <Text fontSize={["md", "xs", "md", "md", "lg"]}>
+                        Gallery
+                      </Text>
+                    </Button>
+                  </Link>
+                </Stack>
+              </Box>
+            ) : null}
           </Box>
           <Flex
             w={"full"}
