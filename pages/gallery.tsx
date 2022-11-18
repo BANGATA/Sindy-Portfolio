@@ -92,7 +92,6 @@ const Gallery = () => {
                 <Flex
                   justifyContent="center"
                   alignItems="center"
-                  border={"solid"}
                   w={"100%"}
                   h={"91vh"}
                 >

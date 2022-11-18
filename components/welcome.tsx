@@ -21,10 +21,6 @@ const Welcoming = () => {
   const textHeader = useColorModeValue("black", "white");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const color = useColorModeValue("black", "white");
-  const variants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
-  };
   return (
     <>
       {colorMode === "light" ? (
@@ -197,12 +193,7 @@ const Welcoming = () => {
           }
           bgPosition="center"
         >
-          <Box
-            //bg={useColorModeValue("gray.200", "gray.900")}
-            px={4}
-            backdropFilter="auto"
-            backdropBlur="8px"
-          >
+          <Box px={4} backdropFilter="auto" backdropBlur="8px">
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
               <IconButton
                 size={"md"}
@@ -226,7 +217,7 @@ const Welcoming = () => {
                   spacing={4}
                   display={{ base: "none", md: "flex" }}
                 >
-                  <Link href={"/home"}>
+                  <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -239,7 +230,7 @@ const Welcoming = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/state"}>
+                  <Link href={"/projects"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -276,7 +267,7 @@ const Welcoming = () => {
             {isOpen ? (
               <Box pb={4} display={{ md: "none" }}>
                 <Stack as={"nav"} spacing={4}>
-                  <Link href={"/home"}>
+                  <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -289,7 +280,7 @@ const Welcoming = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/state"}>
+                  <Link href={"/projects"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -302,7 +293,7 @@ const Welcoming = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/faq"}>
+                  <Link href={"/gallery"}>
                     <Button
                       color={color}
                       variant={"none"}

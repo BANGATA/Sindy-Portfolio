@@ -59,7 +59,7 @@ const Navbar = () => {
             >
               {colorMode === "light" ? (
                 <>
-                  <Link href={"/home"}>
+                  <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -72,7 +72,7 @@ const Navbar = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/state"}>
+                  <Link href={"/projects"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -85,7 +85,7 @@ const Navbar = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/faq"}>
+                  <Link href={"/gallery"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -101,7 +101,7 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
-                  <Link href={"/home"}>
+                  <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -114,7 +114,7 @@ const Navbar = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/state"}>
+                  <Link href={"/projects"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -127,7 +127,7 @@ const Navbar = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/faq"}>
+                  <Link href={"/gallery"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -153,7 +153,7 @@ const Navbar = () => {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              <Link href={"/home"}>
+              <Link href={"/about"}>
                 <Button
                   color={color}
                   variant={"none"}
@@ -164,7 +164,7 @@ const Navbar = () => {
                   <Text fontSize={["md", "xs", "md", "md", "lg"]}>About</Text>
                 </Button>
               </Link>
-              <Link href={"/state"}>
+              <Link href={"/projects"}>
                 <Button
                   color={color}
                   variant={"none"}
@@ -177,7 +177,7 @@ const Navbar = () => {
                   </Text>
                 </Button>
               </Link>
-              <Link href={"/faq"}>
+              <Link href={"/gallery"}>
                 <Button
                   color={color}
                   variant={"none"}
