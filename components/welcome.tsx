@@ -62,7 +62,7 @@ const Welcoming = () => {
                   spacing={4}
                   display={{ base: "none", md: "flex" }}
                 >
-                  <Link href={"/home"}>
+                  <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -75,7 +75,7 @@ const Welcoming = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/state"}>
+                  <Link href={"/projects"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -88,7 +88,7 @@ const Welcoming = () => {
                       </Text>
                     </Button>
                   </Link>
-                  <Link href={"/faq"}>
+                  <Link href={"/gallery"}>
                     <Button
                       color={color}
                       variant={"none"}

@@ -4,8 +4,8 @@ import {
   Navigation,
   Scrollbar,
   Autoplay,
-  EffectFlip,
-  EffectFade,
+  Keyboard,
+  EffectCoverflow,
 } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,7 +16,11 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-flip";
 import "swiper/css/effect-fade";
+import "swiper/css/effect-cards";
+import "swiper/css/effect-coverflow";
+import "swiper/css/effect-creative";
 import "swiper/css/autoplay";
+//  import "./gallery.css";
 import { Flex, Image } from "@chakra-ui/react";
 
 const Gallery = () => {
@@ -77,47 +81,75 @@ const Gallery = () => {
   ];
   return (
     <>
-      <Navbar />
-      <Swiper
-        modules={[Navigation, Scrollbar, Autoplay]}
-        slidesPerView={1}
-        navigation
-        scrollbar={{ draggable: true }}
-        autoplay={{ delay: 2000 }}
-      >
-        {Gambar.map((i: any) => {
-          return (
-            <>
-              <SwiperSlide key={i.id}>
-                <Flex
-                  justifyContent="center"
-                  alignItems="center"
-                  w={"100%"}
-                  h={"91vh"}
-                >
-                  {i.id > 2 ? (
-                    <>
-                      <Image
-                        src={i.Img}
-                        w={["240px", "320px", "320px", "800px"]}
-                        h={["135px", "180px", "180px", "450px"]}
-                      />
-                    </>
-                  ) : (
-                    <>
-                      <Image
-                        src={i.Img}
-                        w={["200px", "300px", "350px", "500px"]}
-                        h={["300px", "350px", "400px", "500px"]}
-                      />
-                    </>
-                  )}
-                </Flex>
-              </SwiperSlide>
-            </>
-          );
-        })}
-      </Swiper>
+      <Flex>
+        <Navbar />
+        <Swiper
+          modules={[Navigation, Scrollbar, Autoplay, EffectCoverflow, Keyboard]}
+          navigation
+          scrollbar={{ draggable: true }}
+          autoplay={{ delay: 3500 }}
+          effect={"coverflow"}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          className="mySwiper"
+          grabCursor={true}
+          keyboard={{
+            enabled: true,
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+              spaceBetween: 10,
+            },
+          }}
+        >
+          {Gambar.map((i: any) => {
+            return (
+              <>
+                <SwiperSlide>
+                  <Flex
+                    justifyContent="center"
+                    alignItems="center"
+                    minH={"91vh"}
+                  >
+                    {i.id > 2 ? (
+                      <>
+                        <Image
+                          src={i.Img}
+                          w={["80px", "320px", "320px", "560px"]}
+                          h={["45px", "180px", "180px", "315px"]}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <Image
+                          src={i.Img}
+                          w={["200px", "300px", "350px", "350px"]}
+                          h={["300px", "350px", "400px", "500px"]}
+                        />
+                      </>
+                    )}
+                  </Flex>
+                </SwiperSlide>
+              </>
+            );
+          })}
+        </Swiper>
+      </Flex>
     </>
   );
 };

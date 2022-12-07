@@ -13,9 +13,9 @@ import "atropos/css";
 import { motion } from "framer-motion";
 
 const Gallery = () => {
-  interface pict{
-    id: number,
-    Img: string,
+  interface pict {
+    id: number;
+    Img: string;
   }
   const Gallery: pict[] = [
     {
@@ -59,12 +59,7 @@ const Gallery = () => {
   const warnaBorder = useColorModeValue("black", "white");
   return (
     <>
-      <Flex
-        minH={"100vh"}
-        //border={"solid"}
-        alignItems={"center"}
-        flexDirection={"column"}
-      >
+      <Flex minH={"100vh"} alignItems={"center"} flexDirection={"column"}>
         <Flex
           minH={"10vh"}
           w={"100%"}
@@ -86,13 +81,7 @@ const Gallery = () => {
         </Flex>
         <VStack>
           <Flex minH={"90vh"} p={[0, 5]}>
-            <Wrap
-              spacing="10px"
-              justify={"center"}
-              align={"center"}
-              p={10}
-              //border={"solid"}
-            >
+            <Wrap spacing="10px" justify={"center"} align={"center"} p={10}>
               {Gallery.filter((i: any) => i.id <= 5).map((i) => {
                 return (
                   <motion.div
@@ -110,7 +99,6 @@ const Gallery = () => {
                       >
                         <Img
                           src={i.Img}
-                          //loading={"lazy"}
                           w={["240px", "320px", "320px", "400px"]}
                           h={["135px", "180px", "180px", "225px"]}
                         />
@@ -119,8 +107,6 @@ const Gallery = () => {
                   </motion.div>
                 );
               })}
-              {/* {Gallery.filter((i: any) => i.id > 5).map((i) => {
-                return ( */}
               <motion.div
                 whileHover={{
                   scale: 1.2,
@@ -128,16 +114,15 @@ const Gallery = () => {
               >
                 <WrapItem border={"5px solid"} color={warnaBorder}>
                   <VStack
-                    w={["200px", "300px", "350px", "350px"]}
-                    h={["300px", "350px", "400px", "400px"]}
+                    w={["200px", "265px", "265px", "265px"]}
+                    h={["300px", "400px", "400px", "400px"]}
                     bg="red.200"
                     justifyContent={"space-between"}
                   >
                     <Img
                       src={Gallery[6]?.Img}
-                      //loading={"lazy"}
-                      w={["200px", "300px", "350px", "350px"]}
-                      h={["300px", "350px", "400px", "400px"]}
+                      w={["200px", "265px", "265px", "265px"]}
+                      h={["300px", "400px", "400px", "400px"]}
                     />
                   </VStack>
                 </WrapItem>
@@ -156,7 +141,6 @@ const Gallery = () => {
                   >
                     <Img
                       src={Gallery[7]?.Img}
-                      //loading={"lazy"}
                       w={["240px", "320px", "320px", "400px"]}
                       h={["135px", "180px", "180px", "225px"]}
                     />
@@ -170,22 +154,19 @@ const Gallery = () => {
               >
                 <WrapItem border={"5px solid"} color={warnaBorder}>
                   <VStack
-                    w={["200px", "300px", "350px", "350px"]}
-                    h={["300px", "350px", "400px", "400px"]}
+                    w={["200px", "265px", "265px", "265px"]}
+                    h={["300px", "400px", "400px", "400px"]}
                     bg="red.200"
                     justifyContent={"space-between"}
                   >
                     <Img
                       src={Gallery[8]?.Img}
-                      //loading={"lazy"}
-                      w={["200px", "300px", "350px", "350px"]}
-                      h={["300px", "350px", "400px", "400px"]}
+                      w={["200px", "265px", "265px", "265px"]}
+                      h={["300px", "400px", "400px", "400px"]}
                     />
                   </VStack>
                 </WrapItem>
               </motion.div>
-              {/* );
-              })} */}
             </Wrap>
           </Flex>
         </VStack>

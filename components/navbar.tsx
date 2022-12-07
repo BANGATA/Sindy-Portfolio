@@ -31,6 +31,8 @@ const Navbar = () => {
         px={4}
         backdropFilter="auto"
         backdropBlur="8px"
+        position="fixed"
+        w={'100%'}
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
