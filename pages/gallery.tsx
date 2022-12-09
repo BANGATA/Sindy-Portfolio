@@ -84,6 +84,7 @@ const Gallery = () => {
         navigation
         scrollbar={{ draggable: true }}
         autoplay={{ delay: 2000 }}
+        loop={true}
       >
         {Gambar.map((i: any) => {
           return (
@@ -107,7 +108,7 @@ const Gallery = () => {
                     <>
                       <Image
                         src={i.Img}
-                        w={["200px", "300px", "350px", "500px"]}
+                        w={["200px", "250px", "300px", "400px"]}
                         h={["300px", "350px", "400px", "500px"]}
                       />
                     </>

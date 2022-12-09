@@ -40,7 +40,7 @@ const About = () => {
                 boxShadow="2xl"
               >
                 <Avatar
-                  src="./ava.jpg"
+                  src="./ava.webp"
                   w={[100, 100, 150, 150]}
                   h={[100, 100, 150, 150]}
                 />
