@@ -62,7 +62,7 @@ const Welcoming = () => {
                   spacing={4}
                   display={{ base: "none", md: "flex" }}
                 >
-                  <Link href={"/home"}>
+                  {/* <Link href={"/home"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -74,8 +74,8 @@ const Welcoming = () => {
                         About
                       </Text>
                     </Button>
-                  </Link>
-                  <Link href={"/state"}>
+                  </Link> */}
+                  {/* <Link href={"/state"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -87,8 +87,8 @@ const Welcoming = () => {
                         Projects
                       </Text>
                     </Button>
-                  </Link>
-                  <Link href={"/faq"}>
+                  </Link> */}
+                  <Link href={"/gallery"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -112,7 +112,7 @@ const Welcoming = () => {
             {isOpen ? (
               <Box pb={4} display={{ md: "none" }}>
                 <Stack as={"nav"} spacing={4}>
-                  <Link href={"/home"}>
+                  {/* <Link href={"/home"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -124,8 +124,8 @@ const Welcoming = () => {
                         About
                       </Text>
                     </Button>
-                  </Link>
-                  <Link href={"/state"}>
+                  </Link> */}
+                  {/* <Link href={"/state"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -137,8 +137,8 @@ const Welcoming = () => {
                         Projects
                       </Text>
                     </Button>
-                  </Link>
-                  <Link href={"/faq"}>
+                  </Link> */}
+                  <Link href={"/gallery"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -217,7 +217,7 @@ const Welcoming = () => {
                   spacing={4}
                   display={{ base: "none", md: "flex" }}
                 >
-                  <Link href={"/about"}>
+                  {/* <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -229,8 +229,8 @@ const Welcoming = () => {
                         About
                       </Text>
                     </Button>
-                  </Link>
-                  <Link href={"/projects"}>
+                  </Link> */}
+                  {/* <Link href={"/projects"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -242,7 +242,7 @@ const Welcoming = () => {
                         Projects
                       </Text>
                     </Button>
-                  </Link>
+                  </Link> */}
                   <Link href={"/gallery"}>
                     <Button
                       color={color}
@@ -267,7 +267,7 @@ const Welcoming = () => {
             {isOpen ? (
               <Box pb={4} display={{ md: "none" }}>
                 <Stack as={"nav"} spacing={4}>
-                  <Link href={"/about"}>
+                  {/* <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -292,7 +292,7 @@ const Welcoming = () => {
                         Projects
                       </Text>
                     </Button>
-                  </Link>
+                  </Link> */}
                   <Link href={"/gallery"}>
                     <Button
                       color={color}

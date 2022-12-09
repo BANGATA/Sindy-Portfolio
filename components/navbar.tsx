@@ -59,7 +59,7 @@ const Navbar = () => {
             >
               {colorMode === "light" ? (
                 <>
-                  <Link href={"/about"}>
+                  {/* <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -71,8 +71,8 @@ const Navbar = () => {
                         About
                       </Text>
                     </Button>
-                  </Link>
-                  <Link href={"/projects"}>
+                  </Link> */}
+                  {/* <Link href={"/projects"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -84,7 +84,7 @@ const Navbar = () => {
                         Projects
                       </Text>
                     </Button>
-                  </Link>
+                  </Link> */}
                   <Link href={"/gallery"}>
                     <Button
                       color={color}
@@ -101,7 +101,7 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
-                  <Link href={"/about"}>
+                  {/* <Link href={"/about"}>
                     <Button
                       color={color}
                       variant={"none"}
@@ -126,7 +126,7 @@ const Navbar = () => {
                         Projects
                       </Text>
                     </Button>
-                  </Link>
+                  </Link> */}
                   <Link href={"/gallery"}>
                     <Button
                       color={color}
