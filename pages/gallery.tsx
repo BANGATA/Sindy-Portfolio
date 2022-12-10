@@ -1,12 +1,6 @@
 import Navbar from "../components/navbar";
 
-import {
-  Navigation,
-  Scrollbar,
-  Autoplay,
-  EffectFlip,
-  EffectFade,
-} from "swiper";
+import { Navigation, Scrollbar, Autoplay, EffectCoverflow } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,8 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "swiper/css/effect-flip";
-import "swiper/css/effect-fade";
+import "swiper/css/effect-coverflow";
 import "swiper/css/autoplay";
 import { Flex, Image } from "@chakra-ui/react";
 
@@ -79,12 +72,37 @@ const Gallery = () => {
     <>
       <Navbar />
       <Swiper
-        modules={[Navigation, Scrollbar, Autoplay]}
+        modules={[Scrollbar, Autoplay, EffectCoverflow]}
+        effect={"coverflow"}
         slidesPerView={1}
-        navigation
-        scrollbar={{ draggable: true }}
-        autoplay={{ delay: 2000 }}
+        //scrollbar={{ draggable: true }}
+        autoplay={{ delay: 3000 }}
         loop={true}
+        loopFillGroupWithBlank={true}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        className="mySwiper"
+        keyboard={{
+          enabled: true,
+        }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 5,
+          },
+        }}
       >
         {Gambar.map((i: any) => {
           return (
@@ -100,8 +118,8 @@ const Gallery = () => {
                     <>
                       <Image
                         src={i.Img}
-                        w={["240px", "320px", "320px", "800px"]}
-                        h={["135px", "180px", "180px", "450px"]}
+                        w={["240px", "320px", "320px", "500px"]}
+                        h={["135px", "180px", "180px", "280px"]}
                       />
                     </>
                   ) : (
