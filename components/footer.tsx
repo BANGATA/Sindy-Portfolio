@@ -11,7 +11,7 @@ const Footer = () => {
             fontWeight={"bold"}
             fontSize={[14, 16, 20, 20]}
           >
-            Copyright © 2022 - Sindy Aprilia
+            Hak Cipta © 2022 - Sindy Aprilia
           </Text>
         </VStack>
       </Flex>
