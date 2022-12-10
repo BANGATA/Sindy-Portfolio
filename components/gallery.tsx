@@ -13,9 +13,9 @@ import "atropos/css";
 import { motion } from "framer-motion";
 
 const Gallery = () => {
-  interface pict{
-    id: number,
-    Img: string,
+  interface pict {
+    id: number;
+    Img: string;
   }
   const Gallery: pict[] = [
     {
@@ -73,13 +73,13 @@ const Gallery = () => {
           alignItems={"center"}
         >
           <Text fontFamily={"Rubik"} fontSize={30}>
-            Gallery
+            Galeri
           </Text>
           <Spacer />
           <Link href="./gallery">
             <a>
               <Text fontFamily={"Rubik"} fontSize={14}>
-                See More...
+                Lihat lebih banyak...
               </Text>
             </a>
           </Link>

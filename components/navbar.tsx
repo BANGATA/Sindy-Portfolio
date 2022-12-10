@@ -94,7 +94,7 @@ const Navbar = () => {
                       }}
                     >
                       <Text fontSize={["md", "xs", "md", "md", "lg"]}>
-                        Gallery
+                        Galeri
                       </Text>
                     </Button>
                   </Link>
@@ -136,7 +136,7 @@ const Navbar = () => {
                       }}
                     >
                       <Text fontSize={["md", "xs", "md", "md", "lg"]}>
-                        Gallery
+                        Galeri
                       </Text>
                     </Button>
                   </Link>
@@ -153,7 +153,7 @@ const Navbar = () => {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              <Link href={"/about"}>
+              {/* <Link href={"/about"}>
                 <Button
                   color={color}
                   variant={"none"}
@@ -176,7 +176,7 @@ const Navbar = () => {
                     Projects
                   </Text>
                 </Button>
-              </Link>
+              </Link> */}
               <Link href={"/gallery"}>
                 <Button
                   color={color}
@@ -185,7 +185,7 @@ const Navbar = () => {
                     color: "gray.300",
                   }}
                 >
-                  <Text fontSize={["md", "xs", "md", "md", "lg"]}>Gallery</Text>
+                  <Text fontSize={["md", "xs", "md", "md", "lg"]}>Galeri</Text>
                 </Button>
               </Link>
             </Stack>

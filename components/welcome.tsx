@@ -97,7 +97,7 @@ const Welcoming = () => {
                       }}
                     >
                       <Text fontSize={["md", "xs", "md", "md", "lg"]}>
-                        Gallery
+                        Galeri
                       </Text>
                     </Button>
                   </Link>
@@ -147,7 +147,7 @@ const Welcoming = () => {
                       }}
                     >
                       <Text fontSize={["md", "xs", "md", "md", "lg"]}>
-                        Gallery
+                        Galeri
                       </Text>
                     </Button>
                   </Link>
@@ -252,7 +252,7 @@ const Welcoming = () => {
                       }}
                     >
                       <Text fontSize={["md", "xs", "md", "md", "lg"]}>
-                        Gallery
+                        Galeri
                       </Text>
                     </Button>
                   </Link>
@@ -302,7 +302,7 @@ const Welcoming = () => {
                       }}
                     >
                       <Text fontSize={["md", "xs", "md", "md", "lg"]}>
-                        Gallery
+                        Galeri
                       </Text>
                     </Button>
                   </Link>
