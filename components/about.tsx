@@ -105,16 +105,18 @@ const About = () => {
                 fontFamily={"Rubik"}
                 textAlign={["center", "unset"]}
               >
-                Film Producer | Freelance | Student at Universitas Multimedia
+                Film Producer | Freelance | Mahasiswi Universitas Multimedia
                 Nusantara
               </Text>
               <Text fontSize={[11, 16, 18, 18]} textAlign={["center", "unset"]}>
-                Experienced Freelance Photographer with a demonstrated history
-                of working in the marketing and advertising industry. Skilled in
-                Social Media, Design, Editing, Freelance Photography, and
-                Multimedia. Strong media and communication professional with a
-                Art focused in Film/Video and Photographic Arts from Universitas
-                Multimedia Nusantara.
+                Sindy Aprilia sebagai Fotografer berpengalaman dengan riwayat
+                kerja yang terbukti bekerja di industri kreatif dan periklanan.
+                Memiliki minat dan keterampilan dalam bidang Fotografi. Menempuh
+                pendidikan dalam bidang Seni dan Desain, berfokus pada dunia
+                perfilman sebagai producer di Universitas Multimedia Nusantara.
+                Mendapatkan penghargaan salah satunya Juara 2 Fotografi SMK
+                Muhammadiyah Tangerang tahun 2018 dan Juara Favorite Obscura
+                Universitas Multimedia Nusantara pada tahun 2020.
               </Text>
             </VStack>
           </Flex>
