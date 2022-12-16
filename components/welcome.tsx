@@ -248,7 +248,7 @@ const Welcoming = () => {
                       color={color}
                       variant={"none"}
                       _hover={{
-                        color: "gray.600",
+                        color: "gray.300",
                       }}
                     >
                       <Text fontSize={["md", "xs", "md", "md", "lg"]}>

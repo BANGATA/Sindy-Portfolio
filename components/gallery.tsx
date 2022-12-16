@@ -61,7 +61,6 @@ const Gallery = () => {
     <>
       <Flex
         minH={"100vh"}
-        //border={"solid"}
         alignItems={"center"}
         flexDirection={"column"}
       >
@@ -86,13 +85,7 @@ const Gallery = () => {
         </Flex>
         <VStack>
           <Flex minH={"90vh"} p={[0, 5]}>
-            <Wrap
-              spacing="10px"
-              justify={"center"}
-              align={"center"}
-              p={10}
-              //border={"solid"}
-            >
+            <Wrap spacing="10px" justify={"center"} align={"center"} p={10}>
               {Gallery.filter((i: any) => i.id <= 5).map((i) => {
                 return (
                   <motion.div
@@ -119,8 +112,6 @@ const Gallery = () => {
                   </motion.div>
                 );
               })}
-              {/* {Gallery.filter((i: any) => i.id > 5).map((i) => {
-                return ( */}
               <motion.div
                 whileHover={{
                   scale: 1.2,
@@ -128,16 +119,16 @@ const Gallery = () => {
               >
                 <WrapItem border={"5px solid"} color={warnaBorder}>
                   <VStack
-                    w={["200px", "300px", "350px", "350px"]}
-                    h={["300px", "350px", "400px", "400px"]}
+                    w={["200px", "200px", "250px", "250px"]}
+                    h={["300px", "300px", "375px", "375px"]}
                     bg="red.200"
                     justifyContent={"space-between"}
                   >
                     <Img
                       src={Gallery[6]?.Img}
                       //loading={"lazy"}
-                      w={["200px", "300px", "350px", "350px"]}
-                      h={["300px", "350px", "400px", "400px"]}
+                      w={["200px", "200px", "250px", "250px"]}
+                      h={["300px", "300px", "375px", "375px"]}
                     />
                   </VStack>
                 </WrapItem>
@@ -170,22 +161,20 @@ const Gallery = () => {
               >
                 <WrapItem border={"5px solid"} color={warnaBorder}>
                   <VStack
-                    w={["200px", "300px", "350px", "350px"]}
-                    h={["300px", "350px", "400px", "400px"]}
+                    w={["200px", "200px", "250px", "250px"]}
+                    h={["300px", "300px", "375px", "375px"]}
                     bg="red.200"
                     justifyContent={"space-between"}
                   >
                     <Img
                       src={Gallery[8]?.Img}
                       //loading={"lazy"}
-                      w={["200px", "300px", "350px", "350px"]}
-                      h={["300px", "350px", "400px", "400px"]}
+                      w={["200px", "200px", "250px", "250px"]}
+                      h={["300px", "300px", "375px", "375px"]}
                     />
                   </VStack>
                 </WrapItem>
               </motion.div>
-              {/* );
-              })} */}
             </Wrap>
           </Flex>
         </VStack>

@@ -90,19 +90,19 @@ const Gallery = () => {
         keyboard={{
           enabled: true,
         }}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-          },
-          480: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 5,
-          },
-        }}
+        // breakpoints={{
+        //   320: {
+        //     slidesPerView: 1,
+        //   },
+        //   480: {
+        //     slidesPerView: 1,
+        //   },
+        //   640: {
+        //     slidesPerView: 3,
+        //     slidesPerGroup: 3,
+        //     spaceBetween: 5,
+        //   },
+        // }}
       >
         {Gambar.map((i: any) => {
           return (
@@ -118,16 +118,16 @@ const Gallery = () => {
                     <>
                       <Image
                         src={i.Img}
-                        w={["240px", "320px", "320px", "500px"]}
-                        h={["135px", "180px", "180px", "280px"]}
+                        w={["320px", "320px", "800px", "800px"]}
+                        h={["180px", "180px", "450px", "450px"]}
                       />
                     </>
                   ) : (
                     <>
                       <Image
                         src={i.Img}
-                        w={["200px", "250px", "300px", "400px"]}
-                        h={["300px", "350px", "400px", "500px"]}
+                        w={["200px", "300px", "300px", "400px"]}
+                        h={["300px", "500px", "500px", "600px"]}
                       />
                     </>
                   )}
