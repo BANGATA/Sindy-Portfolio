@@ -105,8 +105,7 @@ const About = () => {
                 fontFamily={"Rubik"}
                 textAlign={["center", "unset"]}
               >
-                Film Producer | Freelance | Mahasiswi Universitas Multimedia
-                Nusantara
+                Fotografer | Mahasiswi Universitas Multimedia Nusantara
               </Text>
               <Text fontSize={[11, 16, 18, 18]} textAlign={["center", "unset"]}>
                 Sindy Aprilia sebagai Fotografer berpengalaman dengan riwayat
